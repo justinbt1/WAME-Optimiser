@@ -10,9 +10,18 @@ The optimizer class is only compatible with tensorflow>=2.0.
 
 Example usage:
 ``` python
+from tensorflow import keras
 from wame import WAME
 
-# Call WAME when compiling your model, see example below:
-model.compile(optimizer=WAME(), loss='mse', metrics=['mse'])
+# Call WAME when compiling a TensorFlow model, see example below using the Keras API:
+
+model = keras.models.Sequential([
+  keras.layers.Flatten(input_shape=(28, 28)),
+  keras.layers.Dense(128, activation='relu'),
+  keras.layers.Dropout(0.2),
+  keras.layers.Dense(10, activation='softmax')
+])
+
+model.compile(optimizer=WAME(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 ```
