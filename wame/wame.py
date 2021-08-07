@@ -31,7 +31,7 @@ class WAME(Optimizer):
             eta_minus=0.1,
             zeta_min=0.01,
             zeta_max=100,
-            name='WAMA_LAMA',
+            name='WAME',
             **kwargs
     ):
         """ Initializes WAME optimizer object.
@@ -123,8 +123,6 @@ class WAME(Optimizer):
         z_t = (alpha * z) + ((1 - alpha) * zeta_t)
         theta_t = (alpha * theta) + ((1 - alpha) * math_ops.square(grad))
         w_delta = - (learning_rate * (z_t * grad * (1 / (theta_t + epsilon))))
-        # w_delta = - math_ops.div(learning_rate, z_t) * grad * 1 / (theta_t + epsilon)
-        # w_delta = - (learning_rate / z_t) * grad * (1 / (theta_t + epsilon))
         var_t = var + w_delta
 
         # Update variables
