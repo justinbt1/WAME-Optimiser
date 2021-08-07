@@ -6,14 +6,12 @@ Current state–of–the–art Deep Learning classification with Convolutional N
 that by applying more modern methods, which involve adapting a different learning rate for each weight rather than using a single, global, learning rate for the entire network, we are able to reach close to state–of–the–art performance on the same architectures, and improve the training time and accuracy.
 
 #### Usage
-The optimizer class is only compatible with tensorflow>=2.0.
+The optimizer class is only compatible with tensorflow>=2.0.  
+Call WAME when compiling a TensorFlow model, see below example using the Keras API:
 
-Example usage:
 ``` python
 from tensorflow import keras
 from wame import WAME
-
-# Call WAME when compiling a TensorFlow model, see example below using the Keras API:
 
 model = keras.models.Sequential([
   keras.layers.Flatten(input_shape=(28, 28)),
