@@ -1,1 +1,1 @@
-"# WAME Optimizer" 
+# WAME Optimizer
