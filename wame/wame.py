@@ -79,8 +79,8 @@ class WAME(Optimizer):
         """ Add ops to apply dense gradients to the variable `var`.
 
         Args:
-            grad: a `Tensor` representing the gradient.
-            var: a `Tensor` of dtype `resource` which points to the variable to be updated.
+            grad: A `Tensor` representing the gradient.
+            var: A `Tensor` of data type `resource` which points to the variable to be updated.
             apply_state: A dict which is used across multiple apply calls.
 
         Returns:
