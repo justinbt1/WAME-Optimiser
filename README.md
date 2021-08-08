@@ -23,3 +23,7 @@ model = keras.models.Sequential([
 model.compile(optimizer=WAME(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 ```
+
+#### Parameters
+``` python WAME(learning_rate=0.001, alpha=0.9, eta_plus=1.2, eta_minus=0.1, zeta_min=0.01, zeta_max=100, name='WAME', **kwargs) ```  
+learning_rate: float, default=0.001  
