@@ -37,23 +37,30 @@ WAME(
   **kwargs
 ) 
 ```  
-**learning_rate** ```float, default=0.001```  
+**learning_rate**  
+float, default=0.001  
 Initial learning rate.  
 
-**alpha** ```float, default=0.9```  
+**alpha**  
+float, default=0.9  
 Decay rate.  
 
-**eta_plus** ```float, default=1.2```  
+**eta_plus**  
+float, default=1.2  
 Eta plus value.  
 
-**eta_minus** ```float, default=0.1```  
+**eta_minus**  
+float, default=0.1  
 Eta minus value. 
 
-**zeta_min** ```float, default=0.1```  
+**zeta_min**  
+float, default=0.1  
 Minimmum clipping value for per-weight acceleration factor, zeta acceleration factor clipped below this value to avoid runaway effects.  
 
-**zeta_max** ```float, default=100```  
+**zeta_max**  
+float, default=100  
 Maximmum clipping value for per-weight acceleration factor, zeta acceleration factor clipped below this value to avoid runaway effects.  
 
-**name** ```str, default='WAME'```  
+**name**  
+str, default='WAME'  
 Optional name prefix for operations created when applying gradients.    
